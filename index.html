@@ -2,37 +2,54 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Magical Landing Page</title>
-    <link
-            rel="icon"
-            href="images/gdg-icon.png"
-            type="image/png"
-            sizes="16x16"
-    />
-    <link
-      rel="stylesheet"
-      href="styles.css"
-    />
+    <link rel="icon" href="images/gdg-icon.png" type="image/png" sizes="16x16" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Sigmar&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'dark-blue': '#0a0a20',
+              'navy-blue': '#0d1933',
+              
+            },
+            fontFamily: {
+              'cinzel': ['Cinzel', 'serif'],
+              'pt-serif': ['PT Serif', 'serif'],
+            },
+            backgroundImage: {
+              'hero-pattern': "url('images/background.png')",
+            }
+          }
+        }
+      }
+    </script>
   </head>
-  <body>
+  <body class="text-white leading-relaxed bg-gradient-to-b from-dark-blue to-navy-blue overflow-x-hidden">
 
-    <!-- Navigation -->
-    <header>
-      <nav>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact Us</a></li>
-          <li><a href="#">Support</a></li>
+    <!-- Navigation - Mobile responsive -->
+    <header class="py-2 fixed w-full top-0 z-10 bg-transparent">
+      <nav class="bg-dark-blue/50 w-11/12 max-w-lg mx-auto my-2 rounded-full flex justify-center items-center px-3 box-border">
+        <ul class="flex justify-center list-none p-0 m-0 flex-wrap py-2">
+          <li class="mx-2 sm:mx-4 my-1">
+            <a href="#" class="no-underline text-white font-semibold text-sm sm:text-lg transition-colors hover:text-blue-300">Home</a>
+          </li>
+          <li class="mx-2 sm:mx-4 my-1">
+            <a href="#" class="no-underline text-white font-semibold text-sm sm:text-lg transition-colors hover:text-blue-300">About</a>
+          </li>
+          <li class="mx-2 sm:mx-4 my-1">
+            <a href="#" class="no-underline text-white font-semibold text-sm sm:text-lg transition-colors hover:text-blue-300">Contact</a>
+          </li>
+          <li class="mx-2 sm:mx-4 my-1">
+            <a href="#" class="no-underline text-white font-semibold text-sm sm:text-lg transition-colors hover:text-blue-300">Support</a>
+          </li>
         </ul>
       </nav>
     </header>
@@ -40,43 +57,45 @@
     <!-- Main Content -->
     <main>
       <!-- Hero Section -->
-      <section class="hero">
-        <div class="hero-text">
-          <p>
+      <section class="bg-hero-pattern bg-cover min-h-screen flex flex-col items-center justify-center px-4 py-16">
+        <!-- Main Heading -->
+        <h1 class="font-cinzel text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white mb-8 sm:mb-12 tracking-wider text-center drop-shadow-lg bg-gradient-to-r from-blue-300 to-purple-400 bg-clip-text text-transparent">Webwizard 3.0</h1>
+        
+        <div class="flex flex-col items-center justify-center max-w-xl p-4 sm:p-8 rounded-lg text-white relative z-3">
+          <p class="mb-6 text-base sm:text-xl text-center drop-shadow-md">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
             aliquip ex ea commodo consequat. Duis aute irure dolor.
           </p>
-          <button class="cta-button">JOIN NOW</button>
+          <button class="w-36 sm:w-48 h-10 sm:h-12 bg-gradient-to-r from-blue-400 to-purple-500 text-white border-none py-2 px-6 sm:py-3 sm:px-10 text-sm sm:text-xl rounded-full cursor-pointer transition transform hover:-translate-y-1 hover:shadow-lg uppercase font-bold shadow-blue-400/40">JOIN NOW</button>
         </div>
       </section>
 
       <!-- Magical Hat Section -->
-      <section class="content-section1">
-        
-          <img
-            src="images/potion.png"
-            alt="Magical Potion"
-            class="section-image"
-          />
-        <div class="section-text1">
-          <div class="section-title">
-            <h2>THE MAGICAL HAT</h2>
+      <section class="max-w-6xl mx-auto my-12 sm:my-24 px-4 rounded-lg flex flex-col md:flex-row gap-8 md:gap-12 items-center">
+        <img
+          src="images/potion.png"
+          alt="Magical Potion"
+          class="w-full sm:w-4/5 md:w-2/5 h-auto mx-auto block drop-shadow-2xl"
+        />
+        <div class="flex flex-col items-center md:items-left text-center md:text-right md:ml-8 lg:ml-24">
+          <div>
+            <h2 class="font-cinzel text-white text-3xl sm:text-4xl md:text-5xl mb-4 sm:mb-6 uppercase tracking-wider">THE MAGICAL HAT</h2>
           </div>
-          <p>
+          <p class="text-base sm:text-xl w-full">
             Lorem ipsum mer ultrask hyposk, miska än tranerade. Diling
             monohönera pora bebinera, pack. Dinät teling. Berån pott. Benade
             presyn.
           </p>
-          <p>
+          <p class="text-base sm:text-xl w-full">
             Sor kvasiikilig i trav. Lan kvasiögisk. Pomyligen bissa sede yrar
             gigasm. Ysade fenade kavail. Prelig ode, monogt serar. Hoholedes
             hypomönnent medan kartad polägen mikrotiktigt. Dende veganisera är
             vinas bästsäljerism. Skynka igisk mar om bemeliga lande. Misa trende
             plalelingar merade dekas. Regt tylåligen eftersom bede.
           </p>
-          <p>
+          <p class="text-base sm:text-xl w-full">
             Fibes fydogt fide men låren. Episkap preskapet synlogi njuta.
             Mobilvirus förstärkt verklighet var tina.
           </p>
@@ -84,31 +103,29 @@
       </section>
 
       <!-- Blue Potion Section -->
-      <section class="content-section blue-section">
-        
-          <img
-            src="images/orb.png"
-            alt="Blue Potion"
-            class="section-image"
-          />
-        
-        <div class="section-text2">
-          <div class="section-title">
-            <h2>BLUE POTION</h2>
+      <section class="px-4 sm:px-8 py-12 sm:py-16 relative overflow-hidden flex flex-col md:flex-row-reverse items-center justify-between gap-8">
+        <img
+          src="images/orb.png"
+          alt="Blue Potion"
+          class="w-full sm:w-4/5 md:w-2/5 h-auto z-2 drop-shadow-2xl filter drop-shadow-purple-700"
+        />
+        <div class="flex flex-col items-center md:items-start text-center md:text-left md:mr-8 lg:mr-24 z-2 max-w-xl">
+          <div>
+            <h2 class="font-cinzel text-3xl sm:text-4xl mb-4 sm:mb-6 font-bold tracking-wider">BLUE POTION</h2>
           </div>
-          <p>
+          <p class="text-base sm:text-xl mb-4 leading-relaxed">
             Lorem ipsum mer ultrask hyposk, miska än tranerade. Diling
             monohönera pora bebinera, pack. Dinät teling. Berån pott. Benade
             presyn.
           </p>
-          <p>
+          <p class="text-base sm:text-xl mb-4 leading-relaxed">
             Sor kvasiikilig i trav. Lan kvasiögisk. Pomyligen bissa sede yrar
             gigasm. Ysade fenade kavail. Prelig ode, monogt serar. Hoholedes
             hypomönnent medan kartad polägen mikrotiktigt. Dende veganisera är
             vinas bästsäljerism. Skynka igisk mar om bemeliga lande. Misa trende
             plalelingar merade dekas. Regt tylåligen eftersom bede.
           </p>
-          <p>
+          <p class="text-base sm:text-xl mb-4 leading-relaxed">
             Fibes fydogt fide men låren. Episkap preskapet synlogi njuta.
             Mobilvirus förstärkt verklighet var tina.
           </p>
@@ -117,47 +134,45 @@
     </main>
 
     <!-- Footer -->
-    <footer>
-      <div class="footer-content">
+    <footer class="bg-dark-blue text-white py-8 px-4 sm:px-10 relative z-10 border-t border-white/10">
+      <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
+        <img src="images/gdg.png" alt="Google Developer Groups Logo" class="w-36 sm:w-48 h-auto sm:h-24">
         
-          <img src="images/gdg.png" alt="Google Developer Groups Logo" class="gdg-logo">
-       
-        
-        <div class="footer-info">
-          <div class="address-info">
-            <div class="icon location-icon">
+        <div class="flex flex-col gap-3 items-center sm:items-start">
+          <div class="flex items-start gap-3">
+            <div class="mt-1">
               <svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M8 0C3.6 0 0 3.6 0 8C0 13.4 7.1 19.5 7.4 19.8C7.5 19.9 7.8 20 8 20C8.2 20 8.5 19.9 8.6 19.8C8.9 19.5 16 13.4 16 8C16 3.6 12.4 0 8 0ZM8 17.7C6.9 16.5 2 11.6 2 8C2 4.7 4.7 2 8 2C11.3 2 14 4.7 14 8C14 11.6 9.1 16.5 8 17.7Z" fill="white"/>
                 <path d="M8 4C5.8 4 4 5.8 4 8C4 10.2 5.8 12 8 12C10.2 12 12 10.2 12 8C12 5.8 10.2 4 8 4ZM8 10C6.9 10 6 9.1 6 8C6 6.9 6.9 6 8 6C9.1 6 10 6.9 10 8C10 9.1 9.1 10 8 10Z" fill="white"/>
               </svg>
             </div>
-            <address>
+            <address class="not-italic text-indigo-100 text-xs sm:text-sm leading-normal m-0">
               Shri Ramdesbaba College of Engineering and Management,<br>
               Ramdeo Tekdi, Gitishelan-Katol Road, Nagpur - 440013
             </address>
           </div>
           
-          <div class="email-info">
-            <div class="icon email-icon">
+          <div class="flex items-start gap-3">
+            <div class="mt-1">
               <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M18 0H2C0.9 0 0 0.9 0 2V14C0 15.1 0.9 16 2 16H18C19.1 16 20 15.1 20 14V2C20 0.9 19.1 0 18 0ZM18 2V3.5C17.1 4.2 15.8 5.1 12 8C11.4 8.5 10.1 9.7 10 9.7C9.9 9.7 8.6 8.5 8 8C4.2 5.1 2.9 4.2 2 3.5V2H18ZM2 14V6C2.9 6.7 4.4 7.7 7 9.7C7.7 10.3 9.2 11.7 10 11.7C10.8 11.7 12.3 10.3 13 9.7C15.6 7.7 17.1 6.7 18 6V14H2Z" fill="white"/>
               </svg>
             </div>
-            <a href="mailto:elec.rhne@gmail.com">elec.rhne@gmail.com</a>
+            <a href="mailto:elec.rhne@gmail.com" class="text-blue-300 no-underline transition-colors hover:text-blue-500 text-xs sm:text-sm">elec.rhne@gmail.com</a>
           </div>
         </div>
         
-        <div class="social-section">
-          <p>Follow Us:</p>
-          <div class="social-links">
-            <a href="#" class="social-link">
-              <i class="fab fa-instagram"></i>
+        <div class="flex flex-col items-center sm:items-end gap-3">
+          <p class="m-0 text-xs sm:text-sm">Follow Us:</p>
+          <div class="flex gap-3">
+            <a href="#" class="flex items-center justify-center w-8 h-8 sm:w-9 sm:h-9 bg-white/10 rounded-full transition-colors hover:bg-white/20">
+              <i class="fab fa-instagram text-white text-sm sm:text-base"></i>
             </a>
-            <a href="#" class="social-link">
-              <i class="fab fa-linkedin-in"></i>
+            <a href="#" class="flex items-center justify-center w-8 h-8 sm:w-9 sm:h-9 bg-white/10 rounded-full transition-colors hover:bg-white/20">
+              <i class="fab fa-linkedin-in text-white text-sm sm:text-base"></i>
             </a>
-            <a href="#" class="social-link">
-              <i class="fab fa-twitter"></i>
+            <a href="#" class="flex items-center justify-center w-8 h-8 sm:w-9 sm:h-9 bg-white/10 rounded-full transition-colors hover:bg-white/20">
+              <i class="fab fa-twitter text-white text-sm sm:text-base"></i>
             </a>
           </div>
         </div>
